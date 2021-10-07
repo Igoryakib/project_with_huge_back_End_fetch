@@ -1,22 +1,22 @@
 {
-  "name": "GoIteens_project1",
+  "name": "project_with_huge_back_End_fetch",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://Anna-Dominika1.github.io/GoIteens_project1",
+  "homepage": "https://Igoryakib.github.io/project_with_huge_back_End_fetch",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url ./"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Anna-Dominika1/GoIteens_project1.git"
+    "url": "git+https://github.com/Igoryakib/project_with_huge_back_End_fetch.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Anna-Dominika1/GoIteens_project1/issues"
+    "url": "https://github.com/Igoryakib/project_with_huge_back_End_fetch/issues"
   },
   "devDependencies": {
     "@pnotify/core": "^5.2.0",
