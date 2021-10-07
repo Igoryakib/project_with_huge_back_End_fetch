@@ -10,6 +10,14 @@ body {
     height: 100%;
 }
 
+.text_gen {
+    color: $white-grey;
+    font-family: $font-text-describe;
+    transition: 200ms linear;
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .filters {
     position: absolute;
     bottom: 0;
