@@ -1,0 +1,14 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// Стили для файла с примером HTML-фрагмента
+
+@import 'reset.scss';
+@import 'variables.scss';
+@import 'header.scss';
+@import 'renderFilm.scss';
+@import 'checkBox.scss';
+@import 'infoFilm.scss';
+@import 'filters.scss';

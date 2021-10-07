@@ -1,0 +1,270 @@
+.sfs__header {
+    width: 100vw;
+    height: 90px;
+    background-color: $purple;
+    padding: 5px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+}
+
+.header__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    transition: 500ms linear;
+    font-size: 21px;
+    height: auto;
+    width: 20px;
+    padding-top: 40px;
+    text-transform: uppercase;
+    font-family: $font-logo;
+    font-weight: 700;
+    color: $white-grey;
+    & a{
+        color: $white-grey; 
+    }
+    &:hover .logo__wrapper__letters {
+        & .logo__second-letter {
+            left: 3.3em;
+        }
+        & .logo__third-letter {
+            left: 5.5em;
+        } 
+    }
+    &:hover .logo__word {
+        opacity: 1;
+        visibility: initial;
+        pointer-events: initial;
+        transform: translateY(0);
+        transition: 500ms linear;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 40px;
+        width: 70px;
+        padding-top: 0;
+    }
+}
+
+.logo__letter {
+    transition: 500ms linear;
+    position: absolute;
+}
+
+.logo__first-letter {
+    left: 0;
+}
+
+.logo__second-letter {
+    left: 0.6em;
+}
+ .logo__third-letter {
+    left: 1.1em;
+} 
+
+.logo__wrapper__letters {
+    display: inline-block;
+    transition: 500ms linear;
+    position: relative;
+    display: flex;
+    height: 1em;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+        width: 70px;
+    }
+}
+
+.logo__word {
+    font-size: 21px;
+    color: #fff;
+    font-family: $font-logo;
+    font-weight: 700;
+    transition: 500ms linear;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-200px);
+    position: absolute;
+    @media screen and (min-width: 768px) {
+        font-size: 40px;
+    }
+}
+
+.logo__first-word {
+    left: 0.5em;
+}
+
+.logo__second-word {
+    left: 3.8em;
+}
+
+.logo__third-word {
+    left: 6.1em;
+}
+
+#content {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 25%;
+    right: 10%;
+    @media screen and (min-width: 768px) {
+        top: 45%;
+    }
+}
+
+#content.on {
+    -webkit-animation-name: in-out;
+    animation-name: in-out;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+input {
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border: 4px solid $white-grey;
+    border-radius: 50%;
+    background: none;
+    color: $white-grey;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Roboto;
+    outline: 0;
+    -webkit-transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out, padding 0.2s;
+    transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out, padding 0.2s;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+    -webkit-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+    @media screen and (min-width: 768px) {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.search {
+    background: none;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border-radius: 100%;
+    outline: 0;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+    @media screen and (min-width: 768px) {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.search:before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 4px;
+    background-color: $white-grey;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: 18px;
+    margin-left: 13px;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    @media screen and (min-width: 768px) {
+        margin-top: 26px;
+        margin-left: 17px;
+        width: 20px;
+    }
+}
+
+.close {
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+    padding-right: 10px;
+    @media screen and (min-width: 768px) {
+        padding-right: 0;
+    }
+}
+
+.close:before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 4px;
+    margin-top: -1px;
+    margin-left: -13px;
+    background-color: $white-grey;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+.close:after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 4px;
+    background-color: $white-grey;
+    margin-top: -1px;
+    margin-left: -13px;
+    cursor: pointer;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.square {
+    box-sizing: border-box;
+    padding: 0 40px 0 10px;
+    width: 180px;
+    height: 35px;
+    border: 3px solid $white-grey;
+    border-radius: 0;
+    background: none;
+    color: $white-grey;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    outline: 0;
+    -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s;
+    transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out, padding 0.2s;
+    -webkit-transition-delay: 0.4s, 0s, 0.4s;
+    transition-delay: 0.4s, 0s, 0.4s;
+    -webkit-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+
+    @media screen and (min-width: 768px) {
+        width: 300px;
+        height: 50px;
+        border: 4px solid $white-grey;
+        height: 50px;
+    }
+}

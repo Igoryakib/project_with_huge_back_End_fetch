@@ -1,0 +1,47 @@
+<div class='backDropModal'>
+  {{#if backdrop_path}}
+    <img
+      src='https://image.tmdb.org/t/p/w300{{backdrop_path}}'
+      alt='backdrop_path'
+      class='imgBackgroundModal'
+    />
+  {{/if}}
+  {{#unless backdrop_path}}
+    <img
+      class='imgBackgroundModal'
+      class='infoFilmImg'
+      src='https://cdn.dribbble.com/users/156849/screenshots/3474589/404-error-2.gif'
+      alt='no-poster'
+    />
+  {{/unless}}
+  <div
+    class='background_modal'
+    id='modal_id'
+    role='dialog'
+    aria-hidden='true'
+    data-backdrop='static'
+    data-keyboard='false'
+  >
+    <div class='infoFilmCloseModal' id='CloseModal'></div>
+    <h1 class='titleFilmModal'>{{title}}</h1>
+    <div class="wrapperTrailer_infoFilm">
+    <div class='infoFilmWrapper'>
+      {{#if poster_path}}
+        <img class='infoFilmImg' src='https://image.tmdb.org/t/p/w300{{poster_path}}' />
+      {{/if}}
+      {{#unless poster_path}}
+        <img
+          class='infoFilmImg'
+          src='https://png.pngtree.com/png-vector/20201224/ourlarge/pngtree-error-404-page-not-found-png-image_2598541.jpg'
+          alt='no-poster'
+        />
+      {{/unless}}
+      <div class="infoFilmText__wrapper">
+        <p class='infoFilmText' id='infoFilmText'>{{overview}}</p>
+      </div>
+    </div>
+    <iframe class='infoFilmTrailer' id='infoFilmTrailer'>
+    </iframe>
+    </div>
+  </div>
+</div>

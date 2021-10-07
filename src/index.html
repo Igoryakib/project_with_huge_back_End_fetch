@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SFS_site</title>
+  <link rel="shortcut icon" href="./images/logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="sfs__header">
+    <div class="header__content">
+      <h1 class="header__logo"><a class="logo__wrapper__letters" href="#"><span
+            class="logo__letter logo__first-letter">s</span><span class="logo__word logo__first-word">erial</span><span
+            class="logo__letter logo__second-letter">f</span><span class="logo__word logo__second-word">ilm</span><span
+            class="logo__letter logo__third-letter">s</span><span class="logo__word logo__third-word">earch</span></a>
+      </h1>
+      <form id="content">
+        <input type="text" name="input" class="input" id="search-input">
+        <button type="reset" class="search" id="search-btn"></button>
+      </form>
+    </div>
+  </header>
+  <main class="main">
+    <aside class="filters">
+      <div class="filters_box">
+          <div id="filters" class="filters_types_box">
+              <h2 class="filters_title text_general">Фільтри</h2>
+              <ul id="popular" class="filters_name"><h3><a class="text_general" href="#">Популярне</a></h3></ul>
+              <ul id="rate" class="filters_name"><h3><a class="text_general" href="#">За рейтингом</a></h3></ul>
+              <ul id="lastfilm" class="filters_name"><h3><a class="text_general" href="#">Скоро на екранах</a></h3></ul>
+          </div>
+          <div class="button_box">
+              <div id="button" class="button_wrapper">
+                  <button class="button"><span style="font-size: 50px; color: white;" class="material-icons">settings</span></button>
+              </div>
+          </div>
+      </div>
+  </aside>
+    <section class="films_section">
+      <input type="checkbox" id="toggle" class="toggle--checkbox">
+      <label for="toggle" class="toggle--label">
+
+      </label>
+      <ul class="js-card-container">
+
+      </ul>
+      <button type="button" class="load_more js-load_more">
+
+        Показати ще...
+      </button>
+    </section>
+
+
+
+  </main>
+  <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+  <script src="./index.js"></script>
+</body>
+
+</html>
